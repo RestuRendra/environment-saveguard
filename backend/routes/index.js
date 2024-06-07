@@ -3,8 +3,8 @@ import { Register, getUsers, Login, Logout } from "../controllers/Users.js";
 import { verifyToken } from "../middleware/VerifyToken.js";
 import { refreshToken } from "../controllers/refreshToken.js";
 
-const router = expreses.Router();
 
+const router = expreses.Router();
 
 router.get('/users', verifyToken, getUsers);
 router.post('/users', Register);
