@@ -1,12 +1,24 @@
 import express from "express";
+import multer from "multer";
 import { getArtikels, getArtikelById, saveArtikel, updateArtikel, deleteArtikel } from "../controllers/ArtikelController.js";
 
-const router = express.Router();
+import path from "path";
 
-router.get("/artikels", getArtikels);
-router.get("/artikels/:id", getArtikelById);
-router.post("/artikels", saveArtikel);
-router.patch("/artikels/:id", updateArtikel);
-router.delete("/artikels/:id", deleteArtikel);
+var storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, "public/images");
+  },
+  filename: function (req, file, cb) {
+    cb(null, Date.now() + path.extname(file.originalname)); //Appending extension
+  },
+});
+const upload = multer({ storage });
 
-export default router;
+const routerArtikel = express.Router();
+routerArtikel.get("/artikels", getArtikels);
+routerArtikel.get("/artikels/:id", getArtikelById);
+routerArtikel.post("/artikels", upload.single("file"), saveArtikel);
+routerArtikel.patch("/artikels/:id", upload.single("file"), updateArtikel);
+routerArtikel.delete("/artikels/:id", deleteArtikel);
+
+export default routerArtikel;

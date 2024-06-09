@@ -4,7 +4,7 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 import db from "./config/Database.js";
 import router from "./routes/index.js";
-import ArtikelRoute from "./routes/ArtikelRoute.js"
+import routerArtikel from "./routes/ArtikelRoute.js";
 dotenv.config();
 const app = express();
 
@@ -19,6 +19,6 @@ app.use(cors({ credentials:true, origin:'http://localhost:5173' }))
 app.use(cookieParser());
 app.use(express.json());
 app.use(router);
-app.use(ArtikelRoute);
+app.use(routerArtikel);
 
-app.listen(5000, () => console.log('Server running at port 5000'));
+app.listen(5173, () => console.log('Server running at port 5173'));
