@@ -27,10 +27,10 @@ function Market() {
         <div className="row row-cols-1 row-cols-md-3 g-4">
           <div className="col">
             <div className="card">
-              <img src="market/PiringDaurUlang.jpg" className="card-img-top" alt="..." />
+              <img src="market/PiringDaurUlang.png" className="card-img-top" alt="..." />
               <div className="card-body">
                 <h6>Piring Daur Ulang</h6>
-                <p>Rp.22.000</p>
+                <h4>Rp.22.000</h4>
                 <div className="btn-container">
                   <a className="btn-left">
                     <i className="fa-solid fa-star"></i> 4.9
@@ -44,10 +44,10 @@ function Market() {
           </div>
           <div className="col">
             <div className="card">
-              <img src="market/Tas Godie Bag.jpg" className="card-img-top" alt="..." />
+              <img src="market/Tas Godie Bag.png" className="card-img-top" alt="..." />
               <div className="card-body">
                 <h6>Tas GodieBag</h6>
-                <p>Rp.30.000</p>
+                <h4>Rp.30.000</h4>
                 <div className="btn-container">
                   <a className="btn-left">
                     <i className="fa-solid fa-star"></i> 4.9
@@ -61,10 +61,10 @@ function Market() {
           </div>
           <div className="col">
             <div className="card">
-              <img src="market/Souvenir Candle Lilin.jpg" className="card-img-top" alt="..." />
+              <img src="market/Souvenir Candle Lilin.png" className="card-img-top" alt="..." />
               <div className="card-body">
                 <h6>Souvenir Candle Lilin</h6>
-                <p>Rp.12.000</p>
+                <h4>Rp.12.000</h4>
                 <div className="btn-container">
                   <a className="btn-left">
                     <i className="fa-solid fa-star"></i> 4.2
@@ -92,10 +92,10 @@ function Market() {
         <div className="row row-cols-1 row-cols-md-3 g-4">
           <div className="col">
             <div className="card">
-              <img src="market/Tas Karung Bekas.jpg" className="card-img-top" alt="..." />
+              <img src="market/Tas Karung Bekas.png" className="card-img-top" alt="..." />
               <div className="card-body">
                 <h6>Tas Dari Karung Bekas</h6>
-                <p>Rp.6.500</p>
+                <h4>Rp.6.500</h4>
                 <div className="btn-container">
                   <a className="btn-left">
                     <i className="fa-solid fa-star"></i> 4.1
@@ -109,10 +109,10 @@ function Market() {
           </div>
           <div className="col">
             <div className="card">
-              <img src="market/Gantungan Kunci.jpg" className="card-img-top" alt="..." />
+              <img src="market/Gantungan Kunci.png" className="card-img-top" alt="..." />
               <div className="card-body">
                 <h6>Gantungan Kunci </h6>
-                <p>Rp.3.300</p>
+                <h4>Rp.3.300</h4>
                 <div className="btn-container">
                   <a className="btn-left">
                     <i className="fa-solid fa-star"></i> 4.9
@@ -126,10 +126,10 @@ function Market() {
           </div>
           <div className="col">
             <div className="card">
-              <img src="market/Tas Belanja Daur Ulang.jpg" className="card-img-top" alt="..." />
+              <img src="market/Tas Belanja Daur Ulang.png" className="card-img-top" alt="..." />
               <div className="card-body">
                 <h6>Tas Belanja Daur Ulang</h6>
-                <p>Rp.13.000</p>
+                <h4>Rp.13.000</h4>
                 <div className="btn-container">
                   <a className="btn-left">
                     <i className="fa-solid fa-star"></i> 4.8
@@ -146,14 +146,14 @@ function Market() {
 
       <section id="rekomendasi">
         <div className="container mb-3">
-          <h1>Rekomendasi</h1>
+          <h1>Recommendation</h1>
           <div className="row row-cols-1 row-cols-md-3 g-4">
             <div className="col">
               <div className="card">
-                <img src="market/PiringDaurUlang.jpg" className="card-img-top" alt="..." />
+                <img src="market/PiringDaurUlangg.png" className="card-img-top" alt="..." />
                 <div className="card-body">
-                  <h6>Piring Daur Ulang</h6>
-                  <p>Rp.22.000</p>
+                  <h3>Piring Rotan dari bahan Daur Ulang</h3>
+                  <h2>Rp.22.000</h2>
                   <div className="btn-container">
                     <a className="btn-left">
                       <i className="fa-solid fa-star"></i> 4.9
@@ -167,10 +167,10 @@ function Market() {
             </div>
             <div className="col">
               <div className="card">
-                <img src="market/Tas Minyak Daur Ulang.jpg" className="card-img-top" alt="..." />
+                <img src="market/Tas Minyak Daur Ulang.png" className="card-img-top" alt="..." />
                 <div className="card-body">
-                  <h6>Tas Totebag Kemasan Minyak Daur Ulang</h6>
-                  <p>Rp.25.000 - 30.000</p>
+                  <h3>Tas Totebag Kemasan Minyak Daur Ulang</h3>
+                  <h2>Rp.25.000 - 30.000</h2>
                   <div className="btn-container">
                     <a className="btn-left">
                       <i className="fa-solid fa-star"></i> 5.0
@@ -184,10 +184,10 @@ function Market() {
             </div>
             <div className="col">
               <div className="card">
-                <img src="market/Tempat Pensil Daur Ulang.jpg" className="card-img-top" alt="..." />
+                <img src="market/Tempat Pensil Daur Ulang.png" className="card-img-top" alt="..." />
                 <div className="card-body">
-                  <h6>Tempat Pensil Daur Ulang Kotak Pencil Case</h6>
-                  <p>Rp.27.000</p>
+                  <h3>Tempat Pensil Daur Ulang Kotak Pencil Case</h3>
+                  <h2>Rp.27.000</h2>
                   <div className="btn-container">
                     <a className="btn-left">
                       <i className="fa-solid fa-star"></i> 5.0
@@ -205,8 +205,8 @@ function Market() {
               <div className="card">
                 <img src="market/Tempat Pencil Kaleng Rokok dan Sedotan.png" className="card-img-top" alt="..." />
                 <div className="card-body">
-                  <h6>Tempat pensil dari kaleng rokok bekas dan sedotan</h6>
-                  <p>Rp.18.000</p>
+                  <h3>Tempat pensil dari kaleng rokok bekas dan sedotan</h3>
+                  <h2>Rp.18.000</h2>
                   <div className="btn-container">
                     <a className="btn-left">
                       <i className="fa-solid fa-star"></i> 4.9
@@ -220,10 +220,10 @@ function Market() {
             </div>
             <div className="col">
               <div className="card">
-                <img src="market/Tempat Pensil Daur Ulang Bekas.jpg" className="card-img-top" alt="..." />
+                <img src="market/Tempat Pensil Daur Ulang Bekas.png" className="card-img-top" alt="..." />
                 <div className="card-body">
-                  <h6>Tempat pensil / vas bunga dari botol bekas</h6>
-                  <p>Rp.15.500</p>
+                  <h3>Tempat pensil / vas bunga dari botol bekas</h3>
+                  <h2>Rp.15.500</h2>
                   <div className="btn-container">
                     <a className="btn-left">
                       <i className="fa-solid fa-star"></i> 4.9
@@ -237,10 +237,10 @@ function Market() {
             </div>
             <div className="col">
               <div className="card">
-                <img src="market/Kipas Tangan.jpg" className="card-img-top" alt="..." />
+                <img src="market/Kipas Tangan.png" className="card-img-top" alt="..." />
                 <div className="card-body">
-                  <h6>Kipas tangan dari sedotan</h6>
-                  <p>Rp.16.000</p>
+                  <h3>Kipas tangan dari sedotan bekas</h3>
+                  <h2>Rp.16.000</h2>
                   <div className="btn-container">
                     <a className="btn-left">
                       <i className="fa-solid fa-star"></i> 4.8

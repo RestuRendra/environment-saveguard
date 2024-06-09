@@ -37,10 +37,53 @@ function AksiDetail1() {
               future!!!
             </h5>
 
-            <img src="aksi/Dominica Rainforest 2.png" className="picture-aksi" />
+            <img src="aksi/Dominica.png" className="picture-aksi" />
           </div>
         </div>
       </section>
+
+      <div id="komen">
+        <div class="content-diskusi">
+          <div class="sosmed">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <hr />
+            <div class="diskusi">
+              <h3>Discussion</h3>
+              <div class="comment">
+                <img src="Artikel/Artikel Detail/Mask group.png" alt="Profile Picture" />
+                <div class="comment-body">
+                  <div class="comment-header">
+                    <span class="comment-name">Mr Zean</span>
+                    <span class="comment-date">May 01 2024</span>
+                  </div>
+                  <div class="comment-text">Does global warming contribute to coral morbidity?</div>
+                </div>
+              </div>
+              <div class="comment">
+                <img src="Artikel/Artikel Detail/Mask group.png" alt="Profile Picture" />
+                <div class="comment-body">
+                  <div class="comment-header">
+                    <span class="comment-name">Mr Zean</span>
+                    <span class="comment-date">May 01 2024</span>
+                  </div>
+                  <div class="comment-text">Can climate change cause coral reefs to disappear?</div>
+                </div>
+              </div>
+              <div class="comment-diskusi">
+                <hr />
+                <h3>Leave a discussion reply</h3>
+                <form action="#" method="post">
+                  <textarea id="comment" name="comment" rows="4" cols="50" placeholder="Write your message here..."></textarea>
+                  <button type="submit">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <Footer />
     </>
   );

@@ -14,7 +14,7 @@ function Artikel() {
           <table>
             <tr>
               <td rowSpan={2}>
-                <img src="/Artikel/Happy friends chatting together, stock image in botanical garden.png" alt="" />
+                <img src="/Artikel/Happy friends chatting together, stock image in botanical garden.png" alt="Main Image" class="main-image" />
               </td>
               <td>
                 <img src="/Artikel/Rectangle 27.png" alt="Gambar 1" />
@@ -42,8 +42,11 @@ function Artikel() {
               <div className="card">
                 <img src="/Artikel/Playing an Important Role Like Coral Reefs.png" className="card-img-top" alt="..." />
                 <div className="card-body">
-                  <h5>Playing an Important Role Like Coral Reefs</h5>
-                  <p>Coral reefs, with all their beauty and rich biota, are not only a stunning tourism attraction, but also the foundation of life for millions of marine creatures around the world.</p>
+                  <h5>"The Magic of Coral Reefs: The Indispensable Support of Marine Ecosystems and Coastal Protection"</h5>
+                  <p>
+                    Coral reefs, with all their beauty and biological richness, are not only a stunning tourist attraction, but also the lifeblood of millions of marine creatures around the world, making them a critical ecosystem for the
+                    global ecological balance.
+                  </p>
                   <Link to="/artikeldetail" className="btn">
                     Read More
                   </Link>
@@ -54,8 +57,11 @@ function Artikel() {
               <div className="card">
                 <img src="/Artikel/Rectangle 1837.png" className="card-img-top" alt="..." />
                 <div className="card-body">
-                  <h5>Playing with Deforestation: The Talk of Climate Commitment Through FOLU Net Sink 2030</h5>
-                  <p>FOLU Net Sink 2030 strategy risks perpetuating deforestation. Dangerous for saving forests and climate action</p>
+                  <h5>Coral reefs play an important role in protecting the ocean and supporting life</h5>
+                  <p>
+                    Food, Land Use, and Land Use Change (FOLU) plays a role in reducing deforestation to achieve the 2030 net sink goal on climate change. FOLU is considered key in managing land and food to reduce carbon emissions and
+                    maintain environmental sustainability.
+                  </p>
                   <Link to="#" className="btn">
                     Read More
                   </Link>
@@ -66,7 +72,7 @@ function Artikel() {
               <div className="card">
                 <img src="/Artikel/Rectangle 1823.png" className="card-img-top" alt="..." />
                 <div className="card-body">
-                  <h5>Civil Society's Call for 2024 Elections: Choose to Recover from Climate Crisis and Devastation Democracy and Human Rights</h5>
+                  <h5>Choose to Recover from Climate Crisis and Devastation Democracy and Human Rights</h5>
                   <p>
                     The 2024 elections are taking place in the midst of a difficult situation; the climate crisis is increasingly threatening the lives of citizens, the democratic space is narrowing, and the future for the younger
                     generation is uncertain.
@@ -83,7 +89,7 @@ function Artikel() {
               <div className="card">
                 <img src="/Artikel/Rectangle 1841.png" className="card-img-top" alt="..." />
                 <div className="card-body">
-                  <h5>Stop Talking to the Earth, Stories of Food Loss and Damage due to Climate Crisis</h5>
+                  <h5>"Stop Talking to the Earth: Understanding the Direct Impacts of the Climate Crisis on Food Loss and Damage"</h5>
                   <p>Loss and damage from the climate crisis will be increasingly experienced by those who rely on livelihoods from food commodities such as farmers and fishermen.</p>
                   <Link to="#" className="btn">
                     Read More
@@ -108,7 +114,7 @@ function Artikel() {
                 <img src="/Artikel/Rectangle 1835.png" className="card-img-top" alt="..." />
                 <div className="card-body">
                   <h5>Pisang Kepok, Flores' Endangered Rice Support and Source of Income for Farmers</h5>
-                  <p>"Now bananas are just a memory," she said softly.</p>
+                  <p>Pisang Kepok, the leading variety on the island of Flores, has not only provided a bountiful harvest, but has also become the mainstay of rice farming and a source of income for local farmers. </p>
                   <Link to="#" className="btn">
                     Read More
                   </Link>
