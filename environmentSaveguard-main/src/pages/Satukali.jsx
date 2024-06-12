@@ -2,19 +2,34 @@ import React, { useState, useEffect } from "react";
 import "./../index.css";
 import Navbar from "./../Navbar.jsx";
 import { Link } from "react-router-dom";
-import Footer from "../Footer";
+import Footer from "../Footer.jsx";
+
+const userKey = 'user';
 
 const Satukali = () => {
   const [nominal, setNominal] = useState("");
   const [showPopup, setShowPopup] = useState(false);
+  const [showPopupLogin, setShowPopupLogin] = useState(false);
+  const userString = localStorage.getItem(userKey);
 
   const handlePopup = (event) => {
     event.preventDefault();
-    setShowPopup(true);
+    if (!userString) {
+      setShowPopup(true);
+    } else {
+      setShowPopupLogin(true);
+    }
   };
 
-  const handleInputChange = (setter) => (event) => {
-    setter(event.target.value);
+  const formatCurrency = (value) => {
+    if (!value) return "Rp 0";
+    const numberString = value.replace(/[^\d]/g, "");
+    const formattedNumber = new Intl.NumberFormat("id-ID").format(numberString);
+    return `Rp ${formattedNumber}`;
+  };
+
+  const handleInputChange = (event) => {
+    setNominal(formatCurrency(event.target.value));
   };
 
   useEffect(() => {
@@ -29,24 +44,10 @@ const Satukali = () => {
       });
     });
 
-    const nominalInput = document.getElementById("nominal");
-    const formatNominalInput = (e) => {
-      let value = e.target.value.replace(/[^\d]/g, ""); // Remove all non-digit characters
-      if (value) {
-        value = parseInt(value).toLocaleString("id-ID"); // Format the number with thousand separators
-        e.target.value = "Rp. " + value;
-      } else {
-        e.target.value = "";
-      }
-    };
-    nominalInput.addEventListener("input", formatNominalInput);
-
-    // Cleanup the event listeners on component unmount
     return () => {
       inputs.forEach((input) => {
         input.removeEventListener("input", () => {});
       });
-      nominalInput.removeEventListener("input", formatNominalInput);
     };
   }, []);
 
@@ -89,7 +90,7 @@ const Satukali = () => {
                     <div className="form-group">
                       <label htmlFor="nominal">Masukkan Nominal</label>
                       <div className="form-control-container">
-                        <input type="text" id="nominal" name="nominal" className="form-control" placeholder="Rp. 0" value={nominal} onChange={handleInputChange(setNominal)} required />
+                        <input type="text" id="nominal" name="nominal" className="form-control" placeholder="Rp 0" value={nominal} onChange={handleInputChange} required />
                       </div>
                     </div>
                   </form>
@@ -104,6 +105,20 @@ const Satukali = () => {
                           <p className="message">Maaf Anda Harus</p>
                           <p className="message">Login Terlebih Dahulu!</p>
                           <button className="close-button" onClick={() => setShowPopup(false)}>
+                            &times;
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                  {showPopupLogin && (
+                    <div className="overlay" id="popupOverlay">
+                      <div className="popup">
+                        <div className="icon-container">
+                          <img src="./public/password/Done.png" alt="pop up" className="icon" />
+                          <p className="message">Silahkan cek email anda</p>
+                          <p className="message">Untuk melakukan pembayaran</p>
+                          <button className="close-button" onClick={() => setShowPopupLogin(false)}>
                             &times;
                           </button>
                         </div>

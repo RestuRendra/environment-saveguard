@@ -1,3 +1,4 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 html,
@@ -6,12 +7,14 @@ body {
   padding: 0;
   width: 100%;
   height: 100%;
+  font-family: "Poppins", sans-serif;
 }
 
 /* navbar */
 .navbar {
   background-color: #ffffff;
   height: 10vh;
+  font-family: "Poppins", sans-serif;
 }
 
 .navbar-nav {
@@ -64,20 +67,35 @@ input[type="search"]::-webkit-search-cancel-button {
   transform: translateY(-50%);
 }
 
+.profil .foto-pic {
+  height: 45px;
+  width: 45px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
 .button .btn {
   background-color: #03624c;
   color: #ffffff;
   font-size: 15px;
   margin: 20px;
-  border: none; /* Menghapus border button */
-  padding: 8px 10px; /* Padding button */
-  border-radius: 10px; /* Border radius button */
-  cursor: pointer; /* Mengubah kursor menjadi pointer saat dihover */
+  border: none; 
+  padding: 8px 10px; 
+  border-radius: 10px; 
+  cursor: pointer; 
 }
 
 .button .btn:hover {
   color: #ffffff;
   background-color: #ffce39;
+}
+
+.profile-img {
+  width: 50px; /* Atur lebar sesuai kebutuhan */
+  height: 50px; /* Atur tinggi sesuai kebutuhan */
+  border-radius: 50%; /* Membuat gambar menjadi lingkaran */
+  cursor: pointer; /* Mengubah kursor saat hover ke pointer */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Hero Section */
@@ -135,7 +153,7 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 .about-home {
-  margin-top: 5cm;
+  margin-top: 2cm;
 }
 
 #about-home .about-home h1 {
@@ -460,7 +478,7 @@ input[type="search"]::-webkit-search-cancel-button {
 /* ABOUT */
 /* Hero section */
 .about {
-  padding-top: 100px;
+  padding-top: 80px;
   width: 100%;
   height: 15cm;
   background-image: url("/public/About/heroSection.png");
@@ -475,7 +493,7 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .about .content h1 {
   font-size: 55px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .about .content h5 {
@@ -484,11 +502,11 @@ input[type="search"]::-webkit-search-cancel-button {
   margin-left: 340px;
   margin-right: 340px;
   padding-top: 20px;
-  padding-bottom: 30px;
+  padding-bottom: 50px;
 }
 
 .about .content a {
-  padding: 17px 28px;
+  padding: 17px 27px;
   background: #03624c;
   color: white;
   font-weight: bolder;
@@ -498,7 +516,7 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 .about .teksbtn {
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .about .teksbtn:hover {
@@ -559,44 +577,103 @@ input[type="search"]::-webkit-search-cancel-button {
   margin-left: 200;
 }
 
-/* our team */
-#team {
+/* testimoni */
+#testimoni {
+  padding: 80px;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+#testimoni h2 {
+  color: #03624C;
+  font-size: 40px;
+  font-weight: 700;
   text-align: center;
-  padding: 50px;
-  background-color: #5e9b8d;
+  margin-bottom: 50px;
 }
 
-#team h2 {
-  color: #ffffff;
+#testimoni  .card {
+  display: flex;
+  flex-direction: column;
+  height: 110%;
 }
 
-#team h4 {
-  color: #ffffff;
-}
-
-#team .col {
+#testimoni  .card-part {
   padding: 20px;
-  padding-bottom: 2px;
 }
 
-#team .card-body {
-  color: #ffffff;
+#testimoni  .card-part.atas-bg {
+  background-color: #E8EFCF;
+  flex: 2; /* Bigger part */
+  color: #000;
 }
 
-#team .card {
-  border: none;
-  background-color: transparent;
+#testimoni  .card-part.bawah-bg {
+  background-color: #03624C;
+  flex: 1; /* Smaller part */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#team .card-img-top {
-  border-radius: 15px;
+#testimoni  .quote-img {
+  width: 20px; 
+  height: auto;
+  margin-bottom: 10px;
 }
+
+#testimoni  .profile-container {
+  margin-top: -55px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#testimoni  .profile-img {
+  width: 80px; 
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+#testimoni  .profile-container span {
+  font-size: 20px;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#testimoni .row-cols-1 .col, .row-cols-md-4 .col {
+  flex: 1;
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .row-cols-md-4 .col {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+
 
 /* our feature */
 #features {
   text-align: center;
   padding-top: 50px;
 }
+
+#features h2{
+ font-size: 40px;
+ font-weight: bold;
+ margin-top: 50px;
+ margin-bottom: 16px;
+}
+
+#features h4{
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 50px;
+ }
 
 #features .col {
   padding: 20px;
@@ -626,6 +703,7 @@ input[type="search"]::-webkit-search-cancel-button {
   font-weight: bold;
   font-size: 25px;
   font-family: "Poppins",  sans-serif;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 /* Artikel */
@@ -636,16 +714,23 @@ input[type="search"]::-webkit-search-cancel-button {
   height: 95vh;
 }
 
+.container-article {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #article-hero .container-article table {
   border-collapse: collapse;
 }
 
 #article-hero .container-article td {
-  padding-top: 1px;
+  padding: 1px;
 }
 
 #article-hero .main-image {
-  margin-right: 20px;
+  margin-right: 30px;
 }
 
 #artikel-card {
@@ -685,8 +770,6 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 #artikel-card .card {
-  margin-left: 30px;
-  width: 375px;
   height: 550px;
   border-radius: 20px;
   padding: 20px;
@@ -783,6 +866,7 @@ input[type="search"]::-webkit-search-cancel-button {
   height: auto;
   margin-top: 40px;
 }
+
 
 .paragraph5 p {
   margin: 40px 0px;
@@ -1269,7 +1353,7 @@ input[type="search"]::-webkit-search-cancel-button {
   height: 550px;
   margin-bottom: 20px;
   background-color: #5e9b8d;
-  border-radius: 18px;
+  border-radius: 10px;
   color: #ffffff;
 }
 
@@ -1313,7 +1397,7 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 #aksi-detail1 .row h6 {
-  font-size: 21px;
+  font-size: 18px;
   font-weight: 450;
   padding-right: 50px;
   padding-top: 35px;
@@ -1341,8 +1425,10 @@ input[type="search"]::-webkit-search-cancel-button {
 
 #aksi-detail1 .aksi1 .picture-aksi {
   padding-top: 70px;
+  padding-right: 100px;
   padding-bottom: 60px;
-  width: 10%;
+  width: 1220px;
+  height: auto;
 }
 
 /* aksi detail 2 */
@@ -1357,44 +1443,56 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 #aksi-detail2 .row h2 {
-  padding-bottom: 30px;
+  font-size: 35px;
+  font-weight: 600;
+  padding-bottom: 20px;
 }
 
 #aksi-detail2 .row h6 {
-  padding-top: 30px;
+  font-size: 18px;
+  font-weight: 450;
+  padding-right: 50px;
+  padding-top: 35px;
   padding-bottom: 30px;
 }
 
 #aksi-detail2 .picture-aksi2 {
   padding-top: 30px;
   padding-right: 120px;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   width: 600px;
   height: auto;
 }
 
 #aksi-detail2 .card {
-  background-color: #76abae;
+  background-color: rgba(3, 98, 76, 0.4);
   border-radius: 15px;
 }
 
 #aksi-detail2 .card h4 {
+  font-size: 20px;
+  font-weight: 640;
   padding-top: 10px;
 }
 
+#aksi-detail2 .card p  {
+  font-size: 15px;
+  font-weight: 300;
+}
+
 #aksi-detail2 .loading-bar-container {
-  width: 100%; /* Lebar penuh dari container */
-  background-color: #e0e0e0; /* Warna latar belakang container */
-  border-radius: 25px; /* Membuat sudut-sudut melengkung */
-  overflow: hidden; /* Menyembunyikan bagian dari elemen anak yang melampaui container */
+  width: 100%; 
+  background-color: #e0e0e0; 
+  border-radius: 25px; 
+  overflow: hidden; 
 }
 
 #aksi-detail2 .loading-bar {
-  width: 0%; /* Lebar awal dari loading bar */
-  height: 10px; /* Tinggi dari loading bar */
-  background-color: red; /* Warna dari loading bar */
-  border-radius: 25px; /* Membuat sudut-sudut melengkung */
-  transition: width 5s; /* Animasi perubahan lebar */
+  width: 0%; 
+  height: 10px; 
+  background-color: red; 
+  border-radius: 25px; 
+  transition: width 5s; 
 }
 
 #aksi-detail2 .form-group {
@@ -1420,6 +1518,7 @@ input[type="search"]::-webkit-search-cancel-button {
   border-radius: 5px;
   box-sizing: border-box;
 }
+
 
 #aksi-detail2 .transparent-text {
   position: absolute;
@@ -1555,6 +1654,39 @@ input[type="search"]::-webkit-search-cancel-button {
   height: auto;
 }
 
+#bulanan .popup {
+  position: relative;
+  background-color: #ecfadc;
+  padding: 30px;
+  border-radius: 10px;
+  width: 450px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#bulanan .popup img {
+  width: 200px;
+  height: 200px;
+}
+
+#bulanan .icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+#bulanan .icon {
+  width: 50px;
+  height: 50px;
+}
+
+#bulanan .icon-container p {
+  font-size: 18px;
+  color: #03624c;
+}
+
 #bulanan .card {
   background-color: #ffffff;
   border-radius: 15px;
@@ -1570,10 +1702,6 @@ input[type="search"]::-webkit-search-cancel-button {
 #bulanan .container {
   display: flex;
   justify-content: space-between; /* Mengatur agar elemen berada pada ujung kiri dan kanan */
-}
-
-#bulanan .text-container p {
-  font-size: 22px;
 }
 
 #bulanan .container h2 {
@@ -1703,16 +1831,15 @@ input[type="search"]::-webkit-search-cancel-button {
 #bulanan .popup {
   position: relative;
   background-color: #ecfadc;
-  padding: 30px;
-  border-radius: 10px;
-  width: 450px;
+  padding: 40px;
+  border-radius: 5px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
 #bulanan .popup img {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
 }
 
 #bulanan .icon-container {
@@ -1729,7 +1856,7 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 #bulanan .icon-container p {
-  font-size: 18px;
+  font-size: 20px;
   color: #03624c;
 }
 
@@ -1757,6 +1884,39 @@ input[type="search"]::-webkit-search-cancel-button {
   position: relative;
   padding: 100px;
   /* margin-bottom: 40px; */
+}
+
+#satukali .popup {
+  position: relative;
+  background-color: #ecfadc;
+  padding: 30px;
+  border-radius: 10px;
+  width: 450px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#satukali .popup img {
+  width: 200px;
+  height: 200px;
+}
+
+#satukali .icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+#satukali .icon {
+  width: 50px;
+  height: 50px;
+}
+
+#satukali .icon-container p {
+  font-size: 18px;
+  color: #03624c;
 }
 
 #satukali .row h2 {
@@ -1790,10 +1950,6 @@ input[type="search"]::-webkit-search-cancel-button {
 #satukali .container {
   display: flex;
   justify-content: space-between; /* Mengatur agar elemen berada pada ujung kiri dan kanan */
-}
-
-#satukali .text-container p {
-  font-size: 22px;
 }
 
 #satukali .container h2 {
@@ -1927,16 +2083,15 @@ input[type="search"]::-webkit-search-cancel-button {
 #satukali .popup {
   position: relative;
   background-color: #ecfadc;
-  padding: 30px;
-  border-radius: 10px;
-  width: 450px;
+  padding: 40px;
+  border-radius: 5px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
 #satukali .popup img {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
 }
 
 #satukali .icon-container {
@@ -1953,7 +2108,7 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 #satukali .icon-container p {
-  font-size: 18px;
+  font-size: 20px;
   color: #03624c;
 }
 
@@ -1982,12 +2137,6 @@ input[type="search"]::-webkit-search-cancel-button {
   padding: 100px;
 }
 
-.monthly-link,
-.one-time-link,
-.tutor-link {
-  text-decoration: none;
-}
-
 #metode .img-fluid {
   padding-top: 100px;
   padding-bottom: 30px;
@@ -2005,7 +2154,7 @@ input[type="search"]::-webkit-search-cancel-button {
 
 #metode .card h1 {
   text-align: center;
-  text-decoration: none;
+  text-decoration: underline;
   font-size: 28px;
   font-weight: 650;
   padding-bottom: 30px;
@@ -2013,33 +2162,39 @@ input[type="search"]::-webkit-search-cancel-button {
 
 #metode .container {
   display: flex;
-  justify-content: space-between; /* Mengatur agar elemen berada pada ujung kiri dan kanan */
+  justify-content: space-between; 
+}
+
+#metode .text-container {
+  display: flex;
+  padding-top: 20px;
+  font-weight: 700;
 }
 
 #metode .text-container p {
   font-size: 22px;
 }
 
-#metode .text-container {
-  display: flex;
-  padding-top: 20px;
-  font-weight: 600;
+.monthly-link,
+.one-time-link,
+.tutor-link {
+  text-decoration: none;
 }
 
 #metode .monthly-text {
   color: #bdbdbd;
   font-size: 20px;
-  order: 1; /* Mengatur bulanan berada di sebelah kiri */
-  flex: 1; /* Membuat dua link ini memiliki lebar yang sama */
-  text-align: center; /* Mengatur teks menjadi terpusat */
+  order: 1; 
+  flex: 1; 
+  text-align: center; 
 }
 
 #metode .one-time-text {
   color: #bdbdbd;
   font-size: 20px;
-  order: 2; /* Mengatur satu kali berada di sebelah kanan */
-  flex: 1; /* Membuat dua link ini memiliki lebar yang sama */
-  text-align: center; /* Mengatur teks menjadi terpusat */
+  order: 2; 
+  flex: 1; 
+  text-align: center; 
 }
 
 #metode .tutor-text {
@@ -2047,12 +2202,11 @@ input[type="search"]::-webkit-search-cancel-button {
   font-size: 20px;
   order: 3; /* Mengatur satu kali berada di sebelah kanan */
   flex: 1; /* Membuat dua link ini memiliki lebar yang sama */
-  text-align: center; /* Mengatur teks menjadi terpusat */
+  text-align: center; 
 }
 
-/* Warna teks ketika tautan dipilih */
 #metode .text-container a:hover p {
-  color: black; /* Ubah warna teks yang dipilih */
+  color: black; 
 }
 
 #metode hr {
@@ -2137,6 +2291,8 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 #detail-donasi h2 {
+  font-size: 30px;
+  font-weight: 700;
   padding-bottom: 30px;
 }
 
@@ -2147,7 +2303,7 @@ input[type="search"]::-webkit-search-cancel-button {
   width: 500px;
   background-color: #d0fbe7;
   margin-bottom: 20px;
-  border-radius: 15px;
+  border-radius: 7px;
 }
 
 #detail-donasi .dropdown > span {
@@ -2711,10 +2867,10 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 #forgot .input-container i {
-  position: absolute; /* Mengatur posisi absolut untuk ikon */
-  left: 10px; /* Menentukan jarak ikon dari sisi kiri */
-  top: 50%; /* Menempatkan ikon di tengah vertikal */
-  transform: translateY(-50%); /* Mengatur posisi vertikal ikon ke tengah */
+  position: absolute; 
+  left: 10px; 
+  top: 50%; 
+  transform: translateY(-50%); 
 }
 
 #forgot button {
@@ -2733,23 +2889,23 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 #forgot .back-to-signin {
-  text-align: center; /* Posisikan teks ke tengah */
-  margin-top: 20px; /* Atur jarak atas jika diperlukan */
+  text-align: center;
+  margin-top: 20px; 
 }
 
 #forgot .back-to-signin a {
-  color: #000000; /* Warna teks untuk "Back to" menjadi putih */
-  text-decoration: none; /* Menghapus dekorasi garis bawah */
+  color: #000000; 
+  text-decoration: none; 
   font-size: 15px;
   text-align: center;
 }
 
 #forgot .back-to-signin a span {
-  color: #007bff; /* Warna teks untuk "sign in" menjadi biru */
+  color: #007bff; 
 }
 
 #forgot .rotate {
-  animation: scale 2s alternate infinite; /* Animasi scale selama 2 detik */
+  animation: scale 2s alternate infinite; 
 }
 
 /* Reset */
@@ -2965,7 +3121,11 @@ input[type="search"]::-webkit-search-cancel-button {
   padding: 0;
   margin: 0;
   z-index: 1;
-  background: linear-gradient(-45deg, #6aebbe, #03624c, #d0fbe7, #0abf8c);
+  background: linear-gradient( rgba(9, 161, 123, 0.2) 0%, 
+  rgba(7, 153, 117, 0.26) 25%, 
+  rgba(0, 124, 95, 0.42) 50%, 
+  rgba(0, 155, 115, 0.78) 75%, 
+  rgba(10, 191, 140, 1) 100%);
   background-size: 400% 400%;
   width: 100%;
   height: 100vh;
@@ -2973,18 +3133,19 @@ input[type="search"]::-webkit-search-cancel-button {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Poppins", sans-serif;
 }
 
 #signin .gambar img {
   position: absolute;
-  width: 20%;
+  width: 21%; 
   top: 9cm;
   left: 23cm;
 }
 
 #signin .container {
-  margin-top: 1cm;
-  margin-bottom: 1cm;
+  margin-top: 5cm;
+  margin-bottom: 5cm;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -2993,31 +3154,46 @@ input[type="search"]::-webkit-search-cancel-button {
 #signin .container-form {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
-  background-image: linear-gradient(#009b73, #2fd8a2, #6aebbe, #ebfef6);
-  width: 80%;
+  background: linear-gradient(to bottom, 
+  rgba(8, 204, 151, 0.17) 0%, 
+  rgba(5, 173, 128, 0.28) 25%, 
+  rgba(7, 153, 117, 0.41) 50%, 
+  rgba(0, 155, 115, 0.65) 75%, 
+  rgba(10, 191, 140, 0.91) 100%
+  );
+  width: 75%;
   display: flex;
   justify-content: end;
 }
 
 #signin .welcome h1 {
   color: white;
-  margin-right: 30px;
-  padding-left: 50px;
+  margin-right: 60px;
+  padding-left: 60px;
   padding-top: 100px;
   text-align: end;
 }
 
 #signin .biodata h4 {
-  color: white;
-  margin-right: 30px;
-  padding-left: 50px;
-  padding-top: 50px;
+  color: rgb(0, 0, 0);
+  font-size: 17px;
+  margin-right: 90px;
+  margin-top: -20px;
+  margin-bottom: 40px;
   text-align: end;
 }
 
+#signin .biodata img {
+ margin-left: -90px;
+ margin-top: -40px;
+  width: 60px; 
+  height: auto; 
+  background-color: transparent;
+} 
+
 #signin form {
   background-color: #ffffff;
-  width: 140%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -3035,6 +3211,8 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 #signin .biodata h1 {
+  font-size: 35px;
+  font-weight: 600;
   color: black;
   display: flex;
   flex-direction: column;
@@ -3043,40 +3221,50 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 #signin form label {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 14px;
 }
 
 #signin form input {
-  margin-bottom: 15px;
-  padding: 10px;
+  margin-bottom: 25px;
+  padding: 8px;
   border: 1px solid #ccc;
   border-radius: 7px;
 }
 
 #signin .remfp {
-  padding-top: 0px;
   display: flex;
   width: 60%;
   justify-content: space-between;
 }
 
 #signin .checkbox {
+  font-size: 15px;
+  font-weight: 700;
   align-items: center;
+  gap: 20px;
+}
+
+#signin .checkbox input[type="checkbox"] {
+  margin-right: 5px; 
 }
 
 #signin .remfp a {
-  color: #4f4f4f;
+  font-size: 15px;
+  font-weight: 400;
+  color: #000000;
   text-decoration: none;
 }
 
 #signin button {
   width: 60%;
   text-decoration: none;
-  border-radius: 13px;
+  border-radius: 10px;
   font-weight: bold;
   font-size: 16px;
   height: 50px;
-  margin: 20px 20px;
+  margin: 20px;
   border-style: none;
   background-color: #007c5f;
   color: #ffffff;
@@ -3094,16 +3282,22 @@ input[type="search"]::-webkit-search-cancel-button {
 
 #signin .signup {
   display: flex;
-  padding-top: 20px;
-  padding-bottom: 100px;
+  padding-bottom: 30px;
 }
 
 #signin .signup p {
+  font-size: 15px;
   margin-right: 5px;
 }
 
 #signin .signup a {
-  color: #2f80ed;
+  font-size: 15px;
+  color: #2F80ED;
+  text-decoration: none;
+}
+
+#signin .signup a:hover {
+  color: #ffce39;
   text-decoration: none;
 }
 
@@ -3119,6 +3313,54 @@ input[type="search"]::-webkit-search-cancel-button {
   }
 }
 
+.social-media {
+  text-align: center;
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2px;
+  width: 100%;
+  min-width: 367px; 
+}
+
+.separator span {
+  padding: 0 10px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.separator::before, .separator::after {
+  content: '';
+  flex: 1;
+  border-bottom: 2px solid #000000;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.social-icon {
+  font-size: 20px; 
+  color: #000000; 
+  transition: color 0.2;
+}
+
+.social-icon:hover {
+  color: #ffce39; 
+}
+
+.social-icon {
+  margin: 0 13px;
+}
+
+
+
 /* signup */
 #signup {
   z-index: 1;
@@ -3130,13 +3372,14 @@ input[type="search"]::-webkit-search-cancel-button {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Poppins", sans-serif;
 }
 
 #signup .gambar img {
   position: absolute;
-  width: 20%;
+  width: 25%;
   top: 9cm;
-  left: 10cm;
+  left: 9cm;
 }
 
 #signup .container {
@@ -3184,6 +3427,7 @@ input[type="search"]::-webkit-search-cancel-button {
 
 #signup .biodata h1 {
   color: black;
+  font-weight: 600;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -3191,12 +3435,14 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 #signup form label {
+  font-weight: 600;
+  font-size: 14px;
   margin-bottom: 5px;
 }
 
 #signup form input {
-  margin-bottom: 15px;
-  padding: 10px;
+  margin-bottom: 25px;
+  padding: 8px;
   border: 1px solid #ccc;
   border-radius: 7px;
 }
@@ -3206,8 +3452,8 @@ input[type="search"]::-webkit-search-cancel-button {
   width: 60%;
   border-radius: 10px;
   font-weight: bold;
-  font-size: 14px;
-  height: 100px;
+  font-size: 16px;
+  height: 50px;
   margin: 10px 10px;
   padding: 10px 10px;
   border-style: none;
@@ -3229,14 +3475,18 @@ input[type="search"]::-webkit-search-cancel-button {
 
 #signup .signin {
   display: flex;
-  padding-bottom: 100px;
+  padding-bottom: 30px;
 }
 
 #signup .signin p {
-  margin-right: 5px;
+  font-size: 15px;
+  margin-top: 10px;
+  margin-right: 10px;
 }
 
 #signup .signin a {
+  font-size: 15px;
+  margin-top: 10px;
   color: #2f80ed;
   text-decoration: none;
 }
@@ -3262,10 +3512,10 @@ input[type="search"]::-webkit-search-cancel-button {
   background-color: #f8f8f8;
   padding: 20px 30px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  position: fixed; /* Fixes the navbar at the top */
+  position: fixed; 
   top: 0;
   left: 0;
-  z-index: 1000; /* Ensures navbar is above other content */
+  z-index: 1000; 
 }
 
 .profilpage .navbar-left .logo {
@@ -3294,9 +3544,9 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 .profilpage .navbar-right .welcome-text span {
-  display: block; /* Mengubah span menjadi elemen blok */
-  font-size: 16px; /* Ukuran font untuk username */
-  color: #000000; /* Warna teks untuk username */
+  display: block; 
+  font-size: 16px; 
+  color: #000000; 
 }
 
 /* profil inti */
@@ -3306,21 +3556,21 @@ input[type="search"]::-webkit-search-cancel-button {
   padding: 0;
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* Align items to the start to allow margin-top to work */
-  min-height: 100vh; /* Ensure the body takes the full height of the viewport */
+  align-items: flex-start; 
+  min-height: 100vh; 
   background-color: #f4f4f4;
-  padding-top: 100px; /* Increase padding top to account for fixed navbar height */
+  padding-top: 100px; 
 }
 
 .my-profil {
   display: flex;
   width: 70%;
   max-width: 1200px;
-  margin: auto; /* Center the profile section */
+  margin: auto; 
 }
 .profile-image {
   display: flex;
-  align-items: flex-start; /* Mengatur ikon dan gambar profil ke atas */
+  align-items: flex-start; 
 }
 
 .profile-image i {
@@ -3399,8 +3649,8 @@ input[type="search"]::-webkit-search-cancel-button {
 .large-container .profile-image i {
   font-size: 12px;
   color: #03624c;
-  border-radius: 50%; /* membuat lingkaran */
-  box-shadow: 0 0 0 4px #03624c; /* efek outline lingkaran */
+  border-radius: 50%; 
+  box-shadow: 0 0 0 4px #03624c; 
   padding: 5px;
 }
 
@@ -3412,15 +3662,15 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 .large-container .profile-image2 img {
-  width: 80px; /* Atur lebar gambar */
-  height: 80px; /* Atur tinggi gambar */
+  width: 80px;
+  height: 80px; 
 }
 
 .large-container .profile-details2 button {
-  padding: 10px 20px; /* Atur padding tombol */
-  border: none; /* Hapus border tombol */
-  border-radius: 5px; /* Atur border radius tombol */
-  cursor: pointer; /* Atur kursor saat di atas tombol */
+  padding: 10px 20px; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
 }
 
 .large-container .profile-details2 {

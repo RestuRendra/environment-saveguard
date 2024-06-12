@@ -1,24 +1,57 @@
+import React, { useState, useEffect } from "react";
+import "./../index.css";
 import Navbar from "./../Navbar.jsx";
-import "../index.css";
 import { Link } from "react-router-dom";
 import Footer from "../Footer.jsx";
-import React, { useState, useEffect } from "react";
+
+const userKey = 'user';
+// const tokenKey = 'token';
 
 const AksiDetail2 = () => {
-  const [email, setEmail] = useState("");
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [phone, setPhone] = useState("");
+  const userString = localStorage.getItem(userKey);
+  const user = userString ? JSON.parse(userString) : {};
   const [showPopup, setShowPopup] = useState(false);
+  const [showPopupLogin, setShowPopupLogin] = useState(false);
+
+  
+
+  const handlePopup = (event) => {
+    event.preventDefault();
+    if (!userString) {
+      setShowPopup(true);
+    } else {
+      setShowPopupLogin(true);
+    }
+  };
+
+  const handleInputChange = (setter) => (event) => {
+    setter(event.target.value);
+  };
 
   useEffect(() => {
     const loadingBar = document.querySelector(".loading-bar");
     loadingBar.style.width = "70%";
   }, []);
 
-  const handlePopup = () => {
-    setShowPopup(true);
-  };
+  useEffect(() => {
+    const inputs = document.querySelectorAll(".input-wrapper input, .input-wrapper select");
+    inputs.forEach((input) => {
+      input.addEventListener("input", function () {
+        if (input.value.trim() !== "") {
+          input.nextElementSibling.style.display = "none";
+        } else {
+          input.nextElementSibling.style.display = "inline";
+        }
+      });
+    });
+
+    // Cleanup the event listeners on component unmount
+    return () => {
+      inputs.forEach((input) => {
+        input.removeEventListener("input", () => {});
+      });
+    };
+  }, []);
 
   return (
     <>
@@ -46,34 +79,12 @@ const AksiDetail2 = () => {
                   <p>8283 masih dibutuhkan untuk menuju 20,000</p>
                   <form className="form-container aksi2">
                     <div className="form-group">
-                      <label htmlFor="email">Email</label>
-                      <div className="input-wrapper">
-                        <input type="email" id="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-                        <span className={`transparent-text ${email ? "hide" : ""}`}>
-                          <i className="fa-regular fa-envelope"></i>Email Example
-                        </span>
-                      </div>
+                    <label htmlFor="full-name">Username</label>
+                    <input type="text" id="username" name="username" placeholder={user?.name} disabled />
                     </div>
                     <div className="form-group">
-                      <label htmlFor="first-name">Nama Depan</label>
-                      <div className="input-wrapper">
-                        <input type="text" id="first-name" name="first-name" value={firstName} onChange={(e) => setFirstName(e.target.value)} required />
-                        <span className={`transparent-text ${firstName ? "hide" : ""}`}>Nama Depan</span>
-                      </div>
-                    </div>
-                    <div className="form-group">
-                      <label htmlFor="last-name">Nama Belakang</label>
-                      <div className="input-wrapper">
-                        <input type="text" id="last-name" name="last-name" value={lastName} onChange={(e) => setLastName(e.target.value)} required />
-                        <span className={`transparent-text ${lastName ? "hide" : ""}`}>Nama Belakang</span>
-                      </div>
-                    </div>
-                    <div className="form-group">
-                      <label htmlFor="phone">Nomor Telepon</label>
-                      <div className="input-wrapper">
-                        <input type="tel" id="phone" name="phone" value={phone} onChange={(e) => setPhone(e.target.value)} required />
-                        <span className={`transparent-text ${phone ? "hide" : ""}`}>Nomor Telepon</span>
-                      </div>
+                    <label htmlFor="full-name">Email</label>
+                    <input type="email" id="email" name="email" placeholder={user?.email} disabled />
                     </div>
                   </form>
                   <h6>
@@ -91,6 +102,19 @@ const AksiDetail2 = () => {
                           <p className="message">Maaf Anda Harus</p>
                           <p className="message">Login Terlebih Dahulu!</p>
                           <button className="close-button" onClick={() => setShowPopup(false)}>
+                            &times;
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                  {showPopupLogin && (
+                    <div className="overlay" id="popupOverlay">
+                      <div className="popup">
+                        <div className="icon-container">
+                          <img src="./public/password/Done.png" alt="pop up" className="icon" />
+                          <p className="message">Silahkan cek email anda untuk pemberitahuan lebih lanjut</p>
+                          <button className="close-button" onClick={() => setShowPopupLogin(false)}>
                             &times;
                           </button>
                         </div>

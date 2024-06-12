@@ -197,7 +197,7 @@ function Home() {
       <section id="comunity-home">
         <div className="container">
           <div className="comunity-home-detail">
-            <h3>Comunity List</h3>
+            <h3>Community List</h3>
             <Link to="/komunitas">See All</Link>
           </div>
           <div className="comunity-container">

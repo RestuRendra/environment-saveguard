@@ -1,7 +1,7 @@
-import { DataTypes, Sequelize } from "sequelize";
+import { Sequelize } from "sequelize";
 import db from "../config/Database.js";
 
-const {dataType} = Sequelize;
+const {DataTypes} = Sequelize;
 
 const Users = db.define('users',{
     name:{
@@ -23,3 +23,7 @@ const Users = db.define('users',{
 );
 
 export default Users;
+
+(async()=>{
+    await db.sync();
+})

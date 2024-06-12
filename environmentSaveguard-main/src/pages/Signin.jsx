@@ -3,6 +3,9 @@ import "./../index.css";
 import axios from 'axios';
 import { Link, useNavigate } from "react-router-dom";
 
+const tokenKey = 'token';
+const userKey = 'user';
+
 const Signin = () => {
   const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -11,16 +14,28 @@ const Signin = () => {
 
     const Auth = async(e) => {
         e.preventDefault();
+        console.log('masok')
         try {
-            await axios.post('http://localhost:5000/login', {
+            const res = await axios.post('http://localhost:5000/login', {
                 email: email,
                 password: password
             });
+
+            const token = res?.data?.accessToken;
+            if (!token) throw Error('Terjadi Kesalahan, token tidak ditemukan');
+            const user = res?.data?.user;
+            if (!user) throw Error('Terjadi Kesalahan, user tidak ditemukan');
+            
+            localStorage.setItem(tokenKey, token)
+            localStorage.setItem(userKey, JSON.stringify(user))
+
+
             navigate("/profil");
         } catch (error) {
-            if (error.response){
-                setMsg(error.response.data.msg);
-            }
+          console.log(error)
+          if (error.response){
+              setMsg(error.response.data.msg);
+          }
         }
     }
 

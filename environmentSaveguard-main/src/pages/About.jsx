@@ -1,3 +1,4 @@
+
 import Footer from "./../Footer.jsx";
 import Navbar from "./../Navbar.jsx";
 import "./../index.css";
@@ -77,65 +78,88 @@ function About() {
         </div>
       </section>
 
-      <section id="team">
-        <div className="container mb-3">
-          <h2>Meet Our Team</h2>
-          <h4>Our People</h4>
-          <div className="row row-cols-1 row-cols-md-3 g-4">
-            <div className="col">
-              <div className="card">
-                <img src="About/team/Restu.jpg" className="card-img-top" alt="Restu" />
-              </div>
-              <div className="card-body">
-                <h5>Restu Rendra Andresawara</h5>
-                <h6>PM</h6>
-              </div>
-            </div>
-            <div className="col">
-              <div className="card">
-                <img src="About/team/Adinda .jpg" className="card-img-top" alt="Dinda" />
-              </div>
-              <div className="card-body">
-                <h5>Adinda Dyahrestu Putri</h5>
-                <h6>Hipster/Designer</h6>
-              </div>
-            </div>
-            <div className="col">
-              <div className="card">
-                <img src="About/team/Artika.jpg" className="card-img-top" alt="Artika" />
-              </div>
-              <div className="card-body">
-                <h5>Artika Widy</h5>
-                <h6>Hipster/Designer</h6>
+      <section id="testimoni">
+        <div class="container mb-3">
+          <h2>User Testimonials</h2>
+          <div class="row row-cols-1 row-cols-md-4 g-4">
+            <div class="col">
+              <div class="card">
+                <div class="card-part atas-bg">
+                  <div class="quote-icon">
+                      <img src="/About/Kutip.png" alt="" />
+                  </div>
+                  <div class="card-body">
+                    <p class="card-text">
+                      I enjoy reading articles about how to care for the environment. This helps me to better understand the simple ways that I can do to preserve nature.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-part bawah-bg">
+                  <div class="profile-container">
+                  <img src="/About/Testimoni 1.png" alt="" />
+                    <span>SUZANA</span>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="row row-cols-1 row-cols-md-3 g-4">
-            <div className="col">
-              <div className="card">
-                <img src="About/team/Awang.jpg" className="card-img-top" alt="Awang" />
-              </div>
-              <div className="card-body">
-                <h5>Awang Dwi Afrizal</h5>
-                <h6>Hacker/Programmer</h6>
+            <div class="col">
+              <div class="card">
+                <div class="card-part atas-bg">
+                  <div class="quote-icon">
+                  <img src="/About/Kutip.png" alt="" />
+                  </div>
+                  <div class="card-body">
+                    <p class="card-text">
+                      I like reading in-depth article details about topics that interest me. Discussion forums also help me to get new perspectives from other users
+                    </p>
+                  </div>
+                </div>
+                <div class="card-part bawah-bg">
+                  <div class="profile-container">
+                  <img src="/About/Testimoni 2.png" alt="" />
+                    <span>LÍVIA</span>
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="col">
-              <div className="card">
-                <img src="About/team/Nabilla.jpg" className="card-img-top" alt="Billa" />
-              </div>
-              <div className="card-body">
-                <h5>Nabilla Nur Eka Fitriani</h5>
-                <h6>Hacker/Programmer</h6>
+            <div class="col">
+              <div class="card">
+                <div class="card-part atas-bg">
+                  <div class="quote-icon">
+                  <img src="/About/Kutip.png" alt="" />
+                  </div>
+                  <div class="card-body">
+                    <p class="card-text">
+                      I want to help preserve nature, and donation is one way I can do it. This platform makes it easy for me to donate.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-part bawah-bg">
+                  <div class="profile-container">
+                  <img src="/About/Testimonii 3.png" alt="" />
+                    <span>KÁTIA</span>
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="col">
-              <div className="card">
-                <img src="About/team/Tasya.jpg" className="card-img-top" alt="Tasya" />
-              </div>
-              <div className="card-body">
-                <h5>Tasya Oktaviani</h5>
-                <h6>Hacker/Programmer</h6>
+            <div class="col">
+              <div class="card">
+                <div class="card-part atas-bg">
+                  <div class="quote-icon">
+                  <img src="/About/Kutip.png" alt="" />
+                  </div>
+                  <div class="card-body">
+                    <p class="card-text">
+                      I am happy to join the nature lovers community on this platform. I can learn a lot from other community members and share my own experiences.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-part bawah-bg">
+                  <div class="profile-container">
+                    <img src="/About/Testimoni 4.png" alt="" />
+                    <span>MATHEUS</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

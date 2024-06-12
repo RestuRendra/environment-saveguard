@@ -2,7 +2,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
+const userKey = 'user';
+
 function Navbar() {
+  const userString = localStorage.getItem(userKey);
+
   const location = useLocation();
   const pathname = location.pathname;
 
@@ -68,8 +72,8 @@ function Navbar() {
             </div>
 
             <div className="button">
-              <Link to="/signin" className="btn">
-                Log In
+              <Link to={`${userString ? '/profil' : '/signin'}`} className="btn">
+                {userString ? 'Profile' : 'Sign In'}
               </Link>
             </div>
           </div>

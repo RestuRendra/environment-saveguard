@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Footer from "../Footer.jsx";
 
 function AksiDetail1() {
+  
   return (
     <>
       <Navbar />

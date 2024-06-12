@@ -4,14 +4,22 @@ import Navbar from "./../Navbar.jsx";
 import { Link } from "react-router-dom";
 import Footer from "../Footer.jsx";
 
+const userKey = 'user';
+
 const Membership = () => {
   const [nominal, setNominal] = useState("");
   const [periode, setPeriode] = useState("");
   const [showPopup, setShowPopup] = useState(false);
+  const [showPopupLogin, setShowPopupLogin] = useState(false);
+  const userString = localStorage.getItem(userKey);
 
   const handlePopup = (event) => {
     event.preventDefault();
-    setShowPopup(true);
+    if (!userString) {
+      setShowPopup(true);
+    } else {
+      setShowPopupLogin(true);
+    }
   };
 
   const handleInputChange = (setter) => (event) => {
@@ -29,6 +37,7 @@ const Membership = () => {
         }
       });
     });
+
     // Cleanup the event listeners on component unmount
     return () => {
       inputs.forEach((input) => {
@@ -111,6 +120,21 @@ const Membership = () => {
                       </div>
                     </div>
                   )}
+                  {showPopupLogin && (
+                    <div className="overlay" id="popupOverlay">
+                      <div className="popup">
+                        <div className="icon-container">
+                          <img src="./public/password/Done.png" alt="pop up" className="icon" />
+                          <p className="message">Silahkan cek email anda</p>
+                          <p className="message">Untuk melakukan pembayaran</p>
+                          <button className="close-button" onClick={() => setShowPopupLogin(false)}>
+                            &times;
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+    
                 </div>
               </div>
             </div>
