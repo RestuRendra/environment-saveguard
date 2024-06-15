@@ -18,7 +18,7 @@ function Market() {
         <div className="card1">
           <div className="card-body">
             <h5 className="card-title">Butik Daur Ulang</h5>
-            <p className="card-text">Merupakan ritel layanan produk daur ulang sampah plastik di daerah Kecamatan Depok, Sleman, Indonesia.</p>
+            <p className="card-text">It is a retail service for plastic waste recycling products in the Depok District, Sleman, Indonesia.</p>
             <Link to="/DetailMarket" className="card-link">
               More Detail
             </Link>
@@ -83,7 +83,7 @@ function Market() {
         <div className="card1">
           <div className="card-body">
             <h5 className="card-title">Revaldi.Store</h5>
-            <p className="card-text">Merupakan ritel layanan produk kerajinan daur ulang di Kota Jakarta Barat Indonesia.</p>
+            <p className="card-text">It is a retail service for recycled craft products in West Jakarta City, Indonesia.</p>
             <a href="detail-market.html" className="card-link">
               More Detail
             </a>
@@ -255,7 +255,6 @@ function Market() {
           </div>
         </div>
       </section>
-
       <Footer />
     </>
   );
